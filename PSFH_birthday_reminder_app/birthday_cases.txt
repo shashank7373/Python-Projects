@@ -1,0 +1,52 @@
+Date,Remaining days
+01/01/2020,2 months from now
+31/01/2020,2 months from now
+01/02/2020,Next month
+13/02/2020,Next month
+14/02/2020,30 days from now
+15/02/2020,Next month
+16/02/2020,28 days from now
+17/02/2020,After 3 weeks
+22/02/2020,After 3 weeks
+23/02/2020,3 weeks from now
+24/02/2020,20 days from now
+29/02/2020,15 days from now
+01/03/2020,2 weeks from now
+02/03/2020,Next Sunday
+08/03/2020,Next Sunday
+09/03/2020,Coming Sunday
+10/03/2020,Coming Sunday
+11/03/2020,Coming Sunday
+12/03/2020,Coming Sunday
+13/03/2020,Day after Tomorrow
+14/03/2020,Tomorrow
+15/03/2020,Today
+16/03/2020,Yesterday
+17/03/2020,Day before Yesterday
+18/03/2020,3 days back
+19/03/2020,4 days back
+20/03/2020,5 days back
+21/03/2020,6 days back
+22/03/2020,Last Sunday
+23/03/2020,in the last week
+28/03/2020,in the last week
+29/03/2020,2 weeks ago
+04/04/2020,2 weeks ago
+05/04/2020,3 weeks ago
+06/04/2020,3 weeks ago
+11/04/2020,3 weeks ago
+12/04/2020,Almost a month ago
+13/04/2020,Almost a month ago
+14/04/2020,Almost a month ago
+15/04/2020,Last month
+16/04/2020,Last month
+30/04/2020,Last month
+01/05/2020,2 months ago
+31/05/2020,2 months ago
+01/06/2020,3 months ago
+01/07/2020,4 months ago
+01/08/2020,5 months ago
+01/09/2020,6 months ago
+01/10/2020,7 months ago
+01/11/2020,8 months ago
+01/12/2020,9 months ago
