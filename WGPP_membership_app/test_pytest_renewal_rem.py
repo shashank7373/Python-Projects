@@ -39,7 +39,7 @@ def main_validate(datestr):
     Change the file to "test_cases_jan.txt" to run for
     "15/01/2020" renewal date.
 """
-with open("test_cases_jan.txt") as FH:
+with open("test_cases_mar.txt") as FH:
     header = next(FH)
     all_lines = list()
     for line in FH:
