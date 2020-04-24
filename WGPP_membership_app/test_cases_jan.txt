@@ -1,0 +1,36 @@
+Date,Remaining days
+01/01/2020,Your WGPP Annual Membership due date is 2 weeks from now
+02/01/2020,Your WGPP Annual Membership due date is next Wednesday
+08/01/2020,Your WGPP Annual Membership due date is next Wednesday
+09/01/2020,Your WGPP Annual Membership due date is coming Wednesday
+10/01/2020,Your WGPP Annual Membership due date is coming Wednesday
+11/01/2020,Your WGPP Annual Membership due date is coming Wednesday
+12/01/2020,Your WGPP Annual Membership due date is coming Wednesday
+13/01/2020,Your WGPP Annual Membership due date is day after Tomorrow
+14/01/2020,Your WGPP Annual Membership due date is Tomorrow
+15/01/2020,Your WGPP Annual Membership due date is Today
+16/01/2020,Your WGPP Annual Membership due date was Yesterday
+17/01/2020,Your WGPP Annual Membership due date was day before Yesterday
+18/01/2020,Your WGPP Annual Membership due date was 3 days back
+19/01/2020,Your WGPP Annual Membership due date was 4 days back
+20/01/2020,Your WGPP Annual Membership due date was 5 days back
+21/01/2020,Your WGPP Annual Membership due date was 6 days back
+22/01/2020,Your WGPP Annual Membership due date was last Wednesday
+23/01/2020,Your WGPP Annual Membership due date was in the last week
+28/01/2020,Your WGPP Annual Membership due date was in the last week
+29/01/2020,Your WGPP Annual Membership due date was 2 weeks ago
+30/01/2020,Your WGPP Annual Membership due date was 2 weeks ago
+31/01/2020,Your WGPP Annual Membership due date was 2 weeks ago
+04/02/2020,Your WGPP Annual Membership due date is almost a year from now
+29/02/2020,Your WGPP Annual Membership due date is almost a year from now
+01/03/2020,Your WGPP Annual Membership due date is almost 10 months from now
+31/03/2020,Your WGPP Annual Membership due date is almost 10 months from now
+15/04/2020,Your WGPP Annual Membership due date is almost 9 months from now
+01/05/2020,Your WGPP Annual Membership due date is almost 8 months from now
+01/06/2020,Your WGPP Annual Membership due date is almost 7 months from now
+01/07/2020,Your WGPP Annual Membership due date is almost 6 months from now
+01/08/2020,Your WGPP Annual Membership due date is almost 5 months from now
+01/09/2020,Your WGPP Annual Membership due date is almost 4 months from now
+20/10/2020,Your WGPP Annual Membership due date is almost 3 months from now
+01/11/2020,Your WGPP Annual Membership due date is almost 2 months from now
+01/12/2020,Your WGPP Annual Membership due date is almost a month from now
