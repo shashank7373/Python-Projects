@@ -46,8 +46,6 @@ with open("test_cases_mar.txt") as FH:
         date, remaining_days = line.split(",")
         all_lines.append((date, remaining_days.split("\n")[0]))
 
-# print(len(all_lines))
-
 
 @pytest.mark.parametrize('ndate, remaining', all_lines)
 def test_validate(ndate, remaining):
