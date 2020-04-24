@@ -20,7 +20,7 @@ Date,Remaining days
 12/03/2020,Your WGPP Annual Membership due date is coming Sunday
 13/03/2020,Your WGPP Annual Membership due date is day after Tomorrow
 14/03/2020,Your WGPP Annual Membership due date is Tomorrow
-15/03/2020,Your WGPP Annual membership due date is Today
+15/03/2020,Your WGPP Annual Membership due date is Today
 16/03/2020,Your WGPP Annual Membership due date was Yesterday
 17/03/2020,Your WGPP Annual Membership due date was day before Yesterday
 18/03/2020,Your WGPP Annual Membership due date was 3 days back
