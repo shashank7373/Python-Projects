@@ -39,19 +39,11 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("Birthday App")
 
-    heading = tk.Frame(root, width=1100, height=20)
-    heading.grid(row=0, column=0, sticky="nsew")
-
-    headingApp = App(heading)
-    head_list = (" " * 15, "Date              ", "Weekday    ",
-                 "Today                          ", " " * 43)
-    headingApp.column_frame(head_list, 0)
-
     canvas = tk.Canvas(root)
-    canvas.grid(row=1, column=0, sticky=tk.N)
+    canvas.grid(row=0, column=0, sticky=tk.N)
 
     yscroll = tk.Scrollbar(root, orient='vertical', command=canvas.yview)
-    yscroll.grid(row=1, column=1, sticky=tk.N + tk.S)
+    yscroll.grid(row=0, column=1, sticky=tk.N + tk.S)
 
     winframe = tk.Frame(canvas)
     winframe.grid(row=0, column=0, sticky=tk.N)
