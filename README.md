@@ -1,2 +1,2 @@
 # Python-Projects
-Fun, functional and fantastic python beginner projects
+Fun and functional python beginner projects
