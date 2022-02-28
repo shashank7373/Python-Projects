@@ -39,6 +39,14 @@ if __name__ == "__main__":
     root = tk.Tk()
     root.title("Birthday App")
 
+    # heading = tk.Frame(root, width=1100, height=20)
+    # heading.grid(row=0, column=0, sticky="nsew")
+
+    # headingApp = App(heading)
+    # head_list = (" " * 15, "Date              ", "Weekday    ",
+    #              "Today                          ", " " * 43)
+    # headingApp.column_frame(head_list, 0)
+
     canvas = tk.Canvas(root)
     canvas.grid(row=0, column=0, sticky=tk.N)
 

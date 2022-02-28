@@ -3,9 +3,10 @@
     given date string and a pre specified birthday string.
 """
 
-
+import os
 import tkinter as tk
-from app_main import main_func
+from datetime import datetime
+from utils_and_functions import date_set_generator, main_func, check_valid_date
 
 
 class App:
@@ -36,65 +37,96 @@ class App:
 
 # Main starts from here
 if __name__ == "__main__":
-    root = tk.Tk()
-    root.title("Birthday App")
+    print("""Welcome to the Birthday Reminder App. Birthday you would not like to forget!!
+Please type END to exit..\n""")
 
-    heading = tk.Frame(root, width=1100, height=20)
-    heading.grid(row=0, column=0, sticky="nsew")
+    while True:
+	# Take birthday string input
+        try:
+            birthstr = input("Enter Birthday [Format -> dd/mm/yyyy]: ")
+        except Exception:
+            birthstr = "29/05/2020"
+        finally:
+            if birthstr.upper() == "END":
+                break
+            else:
+                birthstr = birthstr[:-4] + str(datetime.now().year)
+            # check if the date is valid
+            if not check_valid_date(birthstr):
+                print("Invalid date. Try again!")
+                continue
 
-    headingApp = App(heading)
-    head_list = (" " * 15, "Date              ", "Weekday    ",
-                 "Today                          ", " " * 43)
-    headingApp.column_frame(head_list, 0)
+	# generate set of dates
+        date_set_generator(birthstr)
 
-    canvas = tk.Canvas(root)
-    canvas.grid(row=1, column=0, sticky=tk.N)
+        root = tk.Tk()
+        root.title("Birthday App")
 
-    yscroll = tk.Scrollbar(root, orient='vertical', command=canvas.yview)
-    yscroll.grid(row=1, column=1, sticky=tk.N + tk.S)
+        heading = tk.Frame(root, width=1100, height=20)
+        heading.grid(row=0, column=0, sticky="nsew")
 
-    winframe = tk.Frame(canvas)
-    winframe.grid(row=0, column=0, sticky=tk.N)
+        headingApp = App(heading)
+        head_list = (" " * 15, "Date              ", "Weekday    ",
+                "Today                          ", " " * 43)
+        headingApp.column_frame(head_list, 0)
 
-    BirthdayApp = App(winframe)
+        canvas = tk.Canvas(root)
+        canvas.grid(row=1, column=0, sticky=tk.N)
 
-    with open("birthday_cases.txt") as FH:
-        header = next(FH)
-        all_dates = list()
-        for line in FH:
-            date = line.split(",")[0]
-            all_dates.append(date)
+        yscroll = tk.Scrollbar(root, orient='vertical', command=canvas.yview)
+        yscroll.grid(row=1, column=1, sticky=tk.N + tk.S)
 
-    message_list = list()
-    for date in all_dates:
-        message_list.append(main_func(date))
+        winframe = tk.Frame(canvas)
+        winframe.grid(row=0, column=0, sticky=tk.N)
 
-    rows = len(all_dates)
-    for row in range(rows):
-        BirthdayApp.column_frame(message_list[row], row)
+        BirthdayApp = App(winframe)
 
-    canvas.create_window(0, 0, anchor='center', window=winframe)
-    canvas.update_idletasks()
+        with open("dataset.txt") as FH:
+            header = next(FH)
+            all_dates = list()
+            for line in FH:
+                date = line.split(",")
+                if len(date) == 1:
+                    # unwanted "\n"
+                    date = date[0][:-1]
+                else:
+                    date = date[0]
+                all_dates.append(date)
+		
+        message_list = list()
+        for date in all_dates:
+            message_list.append(main_func(date, birthstr))
 
-    canvas.config(scrollregion=canvas.bbox('all'), yscrollcommand=yscroll.set)
+        rows = len(all_dates)
+        for row in range(rows):
+            BirthdayApp.column_frame(message_list[row], row)
 
-    root.update()
+        canvas.create_window(0, 0, anchor='center', window=winframe)
+        canvas.update_idletasks()
 
-    canvas.config(width=1100, height=1000)
+        canvas.config(scrollregion=canvas.bbox('all'), yscrollcommand=yscroll.set)
 
-    canvas.yview_moveto(0)
+        root.update()
 
-    """
-        Adding mouse scroll for the window.
-        Doesn't work for all laptop touchpads
-    """
+        canvas.config(width=1100, height=1000)
 
-    def _on_mousewheel(event):
-        canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
+        canvas.yview_moveto(0)
 
-    def _bound_to_mousewheel(event):
-        canvas.bind_all("<MouseWheel>", _on_mousewheel)
+        """
+            Adding mouse scroll for the window.
+            Doesn't work for all laptop touchpads
+        """
 
-    canvas.bind("<Enter>", _bound_to_mousewheel)
+        def _on_mousewheel(event):
+            canvas.yview_scroll(int(-1 * (event.delta / 120)), "units")
 
-    root.mainloop()
+        def _bound_to_mousewheel(event):
+            canvas.bind_all("<MouseWheel>", _on_mousewheel)
+
+        canvas.bind("<Enter>", _bound_to_mousewheel)
+
+        root.mainloop()
+
+	# delete previous set of dates
+        os.system(r"rm dataset.txt")
+

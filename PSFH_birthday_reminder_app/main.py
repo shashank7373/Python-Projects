@@ -17,7 +17,7 @@ try:
     birthstr = birthstr[:-4] + "2020"
 except IndexError:
     datestr = "12/12/2020"
-    birthstr = "15/03/2020"
+    birthstr = "15/01/2020"
 
 btobj = datetime.strptime(birthstr, "%d/%m/%Y")
 dtobj = datetime.strptime(datestr, "%d/%m/%Y")
